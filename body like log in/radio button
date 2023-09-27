@@ -1,0 +1,55 @@
+
+class Sagor extends StatefulWidget{
+  const Sagor({super.key});
+
+  @override
+  State<Sagor> createState() => _SagorState();
+}
+
+class _SagorState extends State<Sagor> {
+
+  int cvalue = 0;
+
+  void sagor(int value){
+    setState(() {
+      cvalue = value;
+    });
+  }
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: Container(
+        child: Column(
+          children: [
+            Radio(
+                value: 1,
+                groupValue: cvalue,
+                onChanged: (staus){
+                  sagor(staus!);
+                }),
+            Radio(
+                value: 2,
+                groupValue: cvalue,
+                onChanged: (staus){
+                  sagor(staus!);
+                }),
+            Radio(
+                value: 3,
+                groupValue: cvalue,
+                onChanged: (staus){
+                  sagor(staus!);
+                }),
+            Radio(
+                value: 4,
+                groupValue: cvalue,
+                onChanged: (staus){
+                  sagor(staus!);
+                })
+          ],
+        ),
+      ),
+    );
+  }
+}
+
