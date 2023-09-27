@@ -1,0 +1,48 @@
+
+
+class Sagor extends StatefulWidget{
+  const Sagor({super.key});
+
+  @override
+  State<Sagor> createState() => _SagorState();
+}
+
+class _SagorState extends State<Sagor> {
+
+  double cvalue = 0;
+
+  void sagor(double value){
+    setState(() {
+      cvalue = value;
+    });
+  }
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: Container(
+        decoration: BoxDecoration(
+          border: Border.all(color: Colors.amber),
+        ),
+        child: Column(
+          children: [
+            Slider(
+                value: cvalue,
+                min: 0.0,
+                max: 10.0,
+              onChanged: (value){
+                  sagor(value);
+              },
+              activeColor: Colors.deepOrangeAccent,
+              inactiveColor: Colors.lightGreen,
+              divisions: 10,
+              label: "Range",
+            ),
+            Text("range value $cvalue"),
+          ],
+        ),
+      )
+    );
+  }
+}
+
