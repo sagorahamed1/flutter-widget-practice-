@@ -1,0 +1,36 @@
+
+
+
+class Sagor extends StatefulWidget{
+  const Sagor({super.key});
+
+  @override
+  State<Sagor> createState() => _SagorState();
+}
+
+class _SagorState extends State<Sagor> {
+
+  bool cvalue = false;
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: Container(
+        decoration: BoxDecoration(
+          border: Border.all(color: Colors.amber)
+        ),
+        child: Checkbox(
+          value: cvalue,
+          onChanged: (status){
+            print(status);
+            setState(() {
+              cvalue = status!;
+            });
+          },
+          activeColor: Colors.red,
+          tristate: false,
+        ),
+      ),
+    );
+  }
+}
