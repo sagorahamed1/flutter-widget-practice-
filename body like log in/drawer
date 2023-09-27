@@ -1,0 +1,59 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+void main (){
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget{
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(home: Home(),);
+  }
+}
+
+
+class Home extends StatelessWidget{
+  const Home({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text("sagor app"),),
+      drawer: Drawer(
+        child: ListView(
+          children: [
+            UserAccountsDrawerHeader(
+                accountName: Text("Sagor"),
+                accountEmail: Text('sagor@gmail.com'),
+              currentAccountPicture: CircleAvatar(
+                child: Image.network("	data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD…IhjLkmI251zDMdqv4h+X4VHDbUjWvodYVCr7u1U0zJH//2Q==")
+              ),
+            ),
+            ListTile(
+              title: Text("your profile"),
+              trailing: Icon(Icons.person),
+            ),
+            ListTile(
+              title: Text("your profile"),
+              trailing: Icon(Icons.person),
+            ),
+            ListTile(
+              title: Text("your profile"),
+              trailing: Icon(Icons.person),
+            ),
+            ListTile(
+              title: Text("your profile"),
+              trailing: Icon(Icons.person),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+
+
