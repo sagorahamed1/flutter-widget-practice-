@@ -1,0 +1,91 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+void main(){
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget{
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+     home: Home(),
+    );
+  }
+}
+
+class Home extends StatelessWidget{@override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Sagor(),
+    );
+  }}
+
+
+
+
+class Sagor extends StatefulWidget{
+  const Sagor({super.key});
+
+  @override
+  State<Sagor> createState() => _SagorState();
+}
+
+class _SagorState extends State<Sagor> {
+
+  int cvalue = 0;
+
+  void sagor(int value){
+    setState(() {
+      cvalue = value;
+    });
+  }
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Container(
+          padding: EdgeInsets.all(20),
+          child: TextField(
+            decoration: InputDecoration(
+              hintText: "Enter you name",
+              labelText: "Full name",
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+              prefixIcon: Icon(Icons.panorama_fish_eye),
+              suffixIcon: Icon(Icons.remove_red_eye),
+            ),
+            maxLength: 10,
+            maxLines: 1,
+          ),
+        ),
+        SizedBox(height: 8,),
+        Container(
+          padding: EdgeInsets.all(20),
+          child: TextField(
+            decoration: InputDecoration(
+              hintText: "password",
+              labelText: "pass word",
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+              prefixIcon: Icon(Icons.panorama_fish_eye),
+              suffixIcon: Icon(Icons.remove_red_eye),
+            ),
+            maxLength: 10,
+            maxLines: 1,
+            obscureText: true,
+            obscuringCharacter: "*",
+          ),
+        ),
+
+        Container(
+          child: ,
+        )
+      ],
+    );
+  }
+}
