@@ -1,0 +1,76 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Flutter Table Widget Example'),
+        ),
+        body: MyTable(),
+      ),
+    );
+  }
+}
+
+class MyTable extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Table(
+      border: TableBorder.all(),
+      // Add a border around the table
+      children: [
+        TableRow(
+          children: [
+            TableCell(
+                child: Center(child: Text("symphone"),)),
+            TableCell(
+              child: Center(child: Text('oppo')),
+            ),
+            TableCell(
+              child: Center(child: Text('itel')),
+            ),
+            TableCell(child: Center(child: Text("Totol Price")))
+          ],
+        ),
+        TableRow(
+          children: [
+            TableCell(
+              child: Center(child: Text('10000')),
+            ),
+            TableCell(
+              child: Center(child: Text('15000')),
+            ),
+            TableCell(
+              child: Center(child: Text('12000')),
+            ),
+            TableCell(
+              child: Center(child: Text('37000')),
+            ),
+          ],
+        ),
+        TableRow(
+          children: [
+            TableCell(
+              child: Center(child: Text('20000')),
+            ),
+            TableCell(
+              child: Center(child: Text('10000')),
+            ),
+            TableCell(
+              child: Center(child: Text('30000')),
+            ),
+            TableCell(
+              child: Center(child: Text('60000')),
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+}
