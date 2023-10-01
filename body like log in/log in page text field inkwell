@@ -1,0 +1,110 @@
+limport 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:shiful_course/person.dart';
+
+void main(){
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget{
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+   return MaterialApp(
+     debugShowCheckedModeBanner: false,
+     home: Home()
+     ,);
+  }
+}
+
+class Home extends StatelessWidget{@override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        children: [
+          Container(
+            alignment: Alignment.topCenter,
+            height: 100,
+            width: 200,
+            margin: EdgeInsets.all(20),
+            child: Image.network("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxXnC3fwMwkbIt3ejGRIw3NmbDyUtgS5g2jA&usqp=CAU"),
+          ),
+
+
+
+
+          Container(
+            child: Text("login",style: TextStyle(fontSize: 28,color: Colors.purpleAccent),),
+          ),SizedBox(height: 10,),
+
+
+
+          Container(
+            child: TextField(
+              decoration: InputDecoration(
+                hintText: "Enter your full name",
+                labelText: "FullName",
+                border: OutlineInputBorder(borderRadius: BorderRadius.circular(5))
+              ),
+            ),
+          ),SizedBox(height: 10,),
+
+
+          Container(
+            child: TextField(
+              decoration: InputDecoration(
+                  hintText: "E-mail",
+                  labelText: "E-mail",
+                  border: OutlineInputBorder(borderRadius: BorderRadius.circular(5))
+              ),
+            ),
+          ),SizedBox(height: 10,),
+
+
+          Container(
+            child: TextField(
+              decoration: InputDecoration(
+                  hintText: "password",
+                  labelText: "password",
+                  suffixIcon: Icon(Icons.remove_red_eye),
+                  border: OutlineInputBorder(borderRadius: BorderRadius.circular(5))
+              ),
+            ),
+          ),SizedBox(height: 16,),
+
+          Container(
+           child: InkWell(
+             onTap: (){
+               print("sagor ahamed");
+             },
+             child: Center(
+              child: Container(
+                height: 50,
+                width: 100,
+                child: Center(child: Text("Login",style: TextStyle(fontSize: 26),)),
+                decoration: BoxDecoration(
+                  color: Colors.lightBlueAccent,
+                  borderRadius: BorderRadius.circular(6),
+                ),
+              ),
+             )
+           )
+          ),SizedBox(height: 20,),
+
+
+
+
+          Container(
+
+            child: Center(child: Text("or sign in")),
+          ), SizedBox(height: 16,),
+
+
+
+
+        ],
+      )
+    );
+
+  }}
