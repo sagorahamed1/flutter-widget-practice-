@@ -1,0 +1,56 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+void main()=> runApp(MyApp());
+
+class MyApp extends StatelessWidget{@override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(primarySwatch: Colors.cyan),
+      home: Home(title:'Gesture Detector'),
+    );
+  }}
+
+
+
+
+class Home extends StatelessWidget{
+  final String title;
+  const Home({super.key, required this.title});
+
+  void _showdialog(BuildContext context){
+    showDialog(
+        context: context,
+        builder: (BuildContext context) {
+           return AlertDialog(
+             title: const Text("Messega"),
+             content: const Text("aleardialog"),
+             actions: [
+               TextButton(
+                   onPressed: (){
+                    print("the action is worked");
+                   },
+                   child: Text("check"))
+             ],
+           );
+        },);
+  }
+
+  
+  
+  
+  @override
+  Widget build(BuildContext context) {
+   return Scaffold(
+     appBar: AppBar(title: Text(title),),
+     body: Center(
+       child: GestureDetector(
+         onTap: (){
+           _showdialog(context);
+         },
+         child: Text("plese check me"),
+       ),
+     ),
+   );
+  }}
