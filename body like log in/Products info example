@@ -1,0 +1,109 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+void main()=> runApp(App());
+
+class App extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Home(),
+    );
+  }
+}
+
+
+class Home extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('Sagor'),),
+      body: ListView(
+       padding: EdgeInsets.fromLTRB(5, 15, 4, 8),
+       children: [
+         Products(
+             name: 'Name : DEEl',
+             description: "Description: Dell is a reputable American multinational product.",
+             phone: 'Price : 40000'
+         ),
+
+         Products(
+             name: 'Name : DEEl',
+             description: "Description: Dell is a reputable American multinational product.",
+             phone: 'Price : 40000'
+         ),
+
+         Products(
+             name: 'Name : DEEl',
+             description: "Description: Dell is a reputable American multinational product.",
+             phone: 'Price : 40000'
+         ),
+
+         Products(
+             name: 'Name : DEEl',
+             description: "Description: Dell is a reputable American multinational product.",
+             phone: 'Price : 40000'
+         ),
+
+         Products(
+             name: 'Name : DEEl',
+             description: "Description: Dell is a reputable American multinational product.",
+             phone: 'Price : 40000'
+         ),
+    ],
+    )
+    );
+  }
+}
+
+
+
+class Products extends StatelessWidget {
+  final String name;
+  final String description;
+  final String phone;
+
+
+  const Products({super.key, required this.name, required this.description, required this.phone});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(4),
+      height: 120,
+      color: Colors.blueGrey,
+      child: Card(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            SizedBox(height: 72,child: Image.asset("assets/wow.png"),),
+            Expanded(
+              child: Container(
+                padding: EdgeInsets.all(10),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                   Align(
+                     alignment: Alignment.centerLeft,
+                     child: Text(name, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),),
+                   ),
+
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(description),
+                    ),
+
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(phone),
+                    ),
+                  ],
+                ),
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
