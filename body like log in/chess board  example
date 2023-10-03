@@ -1,0 +1,73 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+void main()=> runApp(App());
+
+class App extends StatelessWidget {
+  const App({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+        home: Alart());
+  }
+}
+
+
+class Alart extends StatefulWidget {
+  const Alart({super.key});
+
+  @override
+  State<Alart> createState() => _AlartState();
+}
+
+class _AlartState extends State<Alart> {
+  List listdata = [];
+
+ @override
+  void initState() {
+    for(var i = 0; i <90; i++){
+      listdata.add(i);
+    }
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return  Scaffold(
+      appBar: AppBar(centerTitle: true,title: Text("chess board"),),
+      body: GridView.builder(
+          itemCount: listdata.length,
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 9),
+          itemBuilder: (context, index) {
+            return Container(
+              height: 300,
+              margin: EdgeInsets.all(0),
+              color: getcolor(index),
+              child: Text("${listdata[index]}", style: TextStyle(color: gettextColor(index)),),
+            );
+          },)
+    );
+  }
+
+
+
+   getcolor(int n){
+    if(n % 2 == 1){
+      return Colors.black;
+    }
+    else {
+      return Colors.white;
+    }
+  }
+  
+  gettextColor(int m){
+   if (m % 2 == 0){
+     return Colors.white;
+   }
+   else {
+     return Colors.black;
+   }
+  }
+}
