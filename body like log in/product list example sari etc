@@ -1,0 +1,194 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+void main()=> runApp(const App());
+
+class App extends StatelessWidget {
+  const App({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return  MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(primarySwatch: Colors.lime),
+      home: Home(),
+    );
+  }
+}
+
+class Home extends StatelessWidget {
+  const Home({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      drawer: Drawer(),
+      backgroundColor: Colors.white38,
+      appBar: AppBar(
+        title: Text("Producet"),
+        backgroundColor: Colors.white70,
+        elevation: 4,
+        shadowColor: Colors.purpleAccent,
+        actions: [
+          IconButton(onPressed: (){}, icon: Icon(Icons.shopping_basket)),
+          IconButton(onPressed: (){}, icon: Icon(Icons.person)),
+          IconButton(onPressed: (){}, icon: Icon(Icons.message)),
+        ],
+      ),
+      body: ListView(
+        children: [
+      Product(
+        name: "Sari",
+        description: "Traditional Bangladeshi clothing for women.",
+        price: "৳2,000 - ৳10,000",
+      ),
+      Product(
+        name: "Rickshaw",
+        description: "Iconic mode of transportation in Bangladesh.",
+        price: "৳25,000 - ৳40,000",
+      ),
+      Product(
+        name: "Biriyani",
+        description: "A flavorful rice dish with meat or vegetables.",
+        price: "৳250 - ৳500 per plate",
+      ),
+      Product(
+        name: "Jamdani Sari",
+        description: "Fine, handwoven traditional sari.",
+        price: "৳5,000 - ৳20,000",
+      ),
+      Product(
+        name: "Tea",
+        description: "Bangladesh is known for its tea production.",
+        price: "৳200 - ৳500 per kg",
+      ),
+      Product(
+        name: "Hakka Noodles",
+        description: "Popular Chinese-style noodles in Bangladeshi street food.",
+        price: "৳100 - ৳200 per plate",
+      ),
+      Product(
+        name: "Pottery",
+        description: "Handcrafted clay pots and utensils.",
+        price: "Prices vary",
+      ),
+      Product(
+        name: "Rice",
+        description: "Staple food in Bangladesh with various varieties.",
+        price: "৳40 - ৳80 per kg",
+      ),
+      Product(
+        name: "Mangoes",
+        description: "Delicious and sweet Bangladeshi mangoes.",
+        price: "Prices vary by variety",
+      ),
+      Product(
+        name: "Pitha",
+        description: "Traditional Bangladeshi rice cakes.",
+        price: "৳20 - ৳50 per piece",
+      ),
+      Product(
+        name: "Leather Goods",
+        description: "Handcrafted leather products like bags and wallets.",
+        price: "Prices vary",
+      ),
+      Product(
+        name: "Handloom Sari",
+        description: "Artisanal handwoven saris with intricate designs.",
+        price: "৳3,000 - ৳15,000",
+      ),
+      Product(
+        name: "Jute Products",
+        description: "Eco-friendly jute bags and crafts.",
+        price: "Prices vary",
+      ),
+      Product(
+        name: "Shrimp",
+        description: "Bangladesh is a major exporter of shrimp.",
+        price: "৳500 - ৳800 per kg",
+      ),
+
+        ],
+      ),
+    );
+  }
+}
+
+
+class Product extends StatelessWidget {
+  final String name;
+  final String description;
+  final String price;
+
+
+  const Product(
+      {super.key, required this.name, required this.description, required this.price});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(10),
+      height: 140,
+      child: Expanded(
+        child: Row(
+          children: [
+            Expanded(
+              child: Card(
+                elevation: 3,
+                shadowColor: Colors.purpleAccent,
+                child: Container(
+                  padding: EdgeInsets.all(10),
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        height: 32,
+                        child: Stack(
+                          children: [
+                            Align(
+                              alignment: Alignment.topLeft,
+                              child: Text(name, style: TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 22),),
+                            ),
+
+                          ],
+                        ),
+                      ),
+
+                      Expanded(
+                          child: Stack(
+                            children: [
+                              Align(
+                                alignment: Alignment.centerLeft,
+                                child: Text(description),
+                              ),
+                              Align(
+                                alignment: Alignment.topRight,
+                                child: IconButton(
+                                  onPressed: () {
+                                    print("sagor");
+                                  },
+                                  icon: Icon(Icons.favorite_border_outlined,
+                                    color: Colors.red,),
+                                ),
+                              )
+                            ],
+                          )),
+
+                      Expanded(
+                          child: Align(
+                            alignment: Alignment.centerLeft,
+                            child: Text(price),
+                          ))
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+
