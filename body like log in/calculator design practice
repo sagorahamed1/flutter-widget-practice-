@@ -1,0 +1,115 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+void main (){
+  runApp(app());
+}
+
+
+class app extends StatelessWidget{
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Home()
+    );
+  }
+}
+
+
+
+class Home extends StatelessWidget{
+  const Home({super.key});
+
+@override
+  Widget build(BuildContext context) {
+  String reslt = '0';
+  var resultBox = MediaQuery.of(context).size.height/1;
+     return Scaffold(
+       appBar: AppBar(title: Text("sagor"),),
+       body: ListView(
+         children: [
+           Container(
+             height: 100,
+             width: 300,
+             color: Colors.blueGrey,
+             child: Align(alignment: Alignment.bottomRight,
+               child: Text(reslt, style: TextStyle(color: Colors.black, fontSize: 30, ),)),
+           ),
+           Container(
+             height: 400,
+             width: 400,
+             child: Calculator(),
+           )
+         ],
+       ),
+     );
+  }
+}
+
+
+class Calculator extends StatefulWidget{
+  const Calculator({super.key});
+
+  @override
+  State<Calculator> createState() => _CalculatorState();
+}
+
+class _CalculatorState extends State<Calculator> {
+  List item = [
+    "C",
+    "%",
+    "back",
+    "/",
+    "7",
+    "8",
+    "9",
+    "*",
+    "4",
+    "5",
+    "6",
+    "+",
+    "1",
+    "2",
+    "3",
+    "-",
+    "00",
+    "0",
+    ".",
+    "="
+  ];
+@override
+  Widget build(BuildContext context) {
+  var heght = MediaQuery.of(context).size.height/4;
+    return Container(
+      height: 500,
+      width: 400,
+      child: GridView.builder(
+          itemCount: item.length,
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 4),
+          itemBuilder: (context, index) {
+            return Container(
+              alignment: Alignment.center,
+              margin: EdgeInsets.all(5),
+              padding: EdgeInsets.all(3),
+              height: heght,
+              width: heght,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.black26,
+                boxShadow:
+                [
+                  BoxShadow(
+                    color: Colors.red.withOpacity(0.1),
+                    blurRadius: 4,
+                    spreadRadius: 0.50,
+                    offset: Offset(-3,-3)
+                  )
+                ]
+              ),
+              child: Center(child: Text("${item[index]}")),
+            );
+          },
+      ),
+    );
+  }}
