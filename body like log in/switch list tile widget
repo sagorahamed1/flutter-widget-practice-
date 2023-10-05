@@ -1,3 +1,32 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+
+void main ()=> runApp(App());
+
+class App extends StatelessWidget {
+  const App({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Home(),
+    );
+  }
+}
+
+class Home extends StatelessWidget {
+  const Home({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Sagor(),
+    );
+  }
+}
+
 
 
 class Sagor extends StatefulWidget{
@@ -14,25 +43,24 @@ class _SagorState extends State<Sagor> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(16.0),
-      child: Container(
-        decoration: BoxDecoration(
-          border: Border.all(color: Colors.amber),
-        ),
-        child: SwitchListTile(
-          value: cvalue,
-          activeColor: Colors.lightGreen,
-          title: Text("Sagor Ahamed"),
-          subtitle: Text("flutter developer"),
-          secondary: Icon(Icons.switch_left),
-          onChanged: (value){
-            setState(() {
-              cvalue = value;
-            });
-          },
+        padding: const EdgeInsets.all(16.0),
+        child: Container(
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.amber),
+            ),
+            child: SwitchListTile(
+              value: cvalue,
+              activeColor: Colors.lightGreen,
+              title: Text("Sagor Ahamed"),
+              subtitle: Text("flutter developer"),
+              secondary: Icon(Icons.switch_left),
+              onChanged: (value){
+                setState(() {
+                  cvalue = value;
+                });
+              },
+            )
         )
-      )
     );
   }
 }
-
