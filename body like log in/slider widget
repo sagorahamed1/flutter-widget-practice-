@@ -1,3 +1,34 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+
+void main ()=> runApp(App());
+
+class App extends StatelessWidget {
+  const App({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Home(),
+    );
+  }
+}
+
+class Home extends StatelessWidget {
+  const Home({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(centerTitle: true, elevation: .9,title: Text("simple app",
+      style: TextStyle(fontWeight: FontWeight.w600, fontStyle: FontStyle.italic, fontSize: 25),
+      ),),
+      body: Sagor(),
+    );
+  }
+}
 
 
 class Sagor extends StatefulWidget{
@@ -11,38 +42,38 @@ class _SagorState extends State<Sagor> {
 
   double cvalue = 0;
 
-  void sagor(double value){
+  void sagor(double value) {
     setState(() {
       cvalue = value;
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(16.0),
-      child: Container(
-        decoration: BoxDecoration(
-          border: Border.all(color: Colors.amber),
-        ),
-        child: Column(
-          children: [
-            Slider(
+        padding: const EdgeInsets.all(16.0),
+        child: Container(
+          decoration: BoxDecoration(
+            border: Border.all(color: Colors.amber),
+          ),
+          child: Column(
+            children: [
+              Slider(
                 value: cvalue,
                 min: 0.0,
                 max: 10.0,
-              onChanged: (value){
+                onChanged: (value) {
                   sagor(value);
-              },
-              activeColor: Colors.deepOrangeAccent,
-              inactiveColor: Colors.lightGreen,
-              divisions: 10,
-              label: "Range",
-            ),
-            Text("range value $cvalue"),
-          ],
-        ),
-      )
+                },
+                activeColor: Colors.deepOrangeAccent,
+                inactiveColor: Colors.lightGreen,
+                divisions: 10,
+                label: "Range",
+              ),
+              Text("range value $cvalue"),
+            ],
+          ),
+        )
     );
   }
 }
-
