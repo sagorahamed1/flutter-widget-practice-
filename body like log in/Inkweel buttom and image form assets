@@ -1,0 +1,77 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+void main (){
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget{
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: Text("buttom"),),
+        body: Center(
+          child: ListView(
+
+            children: [
+              HomePage("ok"),
+              SizedBox(height: 6,),
+              HomePage("cheak"),
+              SizedBox(height: 6,),
+              HomePage("select"),
+              SizedBox(height: 6,),
+              HomePage("main"),
+              SizedBox(height: 6,),
+              HomePage("paramiter"),
+              SizedBox(height: 6,),
+              Container(
+                child: Image.asset("assets/sagor.jpg"),
+              ),
+              SizedBox(height: 10,),
+              Container(
+                child: Image.asset("assets/soid.jpg"),
+              ),
+              SizedBox(height: 20,),
+              Container(
+                child: Image.asset("assets/sagors.jfif"),
+              ),
+               SizedBox(height: 20,),
+              Container(
+                child: Image.asset("assets/sagors.jfif"),
+              ),
+            ],
+          ),
+        )
+      ),
+    );
+  }
+}
+
+class HomePage extends StatelessWidget{
+  final String name;
+
+  HomePage(this.name);
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: (){
+        print("sagor ahamed");
+      },
+      child: Center(
+        child: Container(
+          height: 50,
+          width: 80,
+          child: Center(child: Text(name)),
+          decoration: BoxDecoration(
+            color: Colors.blueGrey,
+            borderRadius: BorderRadius.circular(7),
+          ),
+        ),
+      ),
+    );
+  }
+}

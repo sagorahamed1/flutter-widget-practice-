@@ -1,0 +1,47 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:shiful_course/person.dart';
+
+void main (){
+  runApp(MyApp());
+}
+
+class MyApp extends StatefulWidget{
+  const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  List dataList = [];
+
+  @override
+  void initState() {
+    for(var i = 0; i < 20; i++){
+      dataList.add(i);
+    }
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    var heit = MediaQuery.of(context).size.height/2;
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: Text("buttom"),),
+        body: ListView.separated(
+          separatorBuilder: (context, index) => Divider(),
+            itemCount: dataList.length,
+            itemBuilder: (context, index) {
+              return ListTile(
+                title: Text("This is List ${dataList[index]}"),
+                subtitle: Text("Flutter developer"),
+                trailing: Icon(Icons.star),
+                leading: Image.asset("assets/sagors.jfif"),
+              );
+            },),
+      ),
+    );
+  }
+}

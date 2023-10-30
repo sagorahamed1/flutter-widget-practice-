@@ -1,0 +1,54 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+void main(){
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget{
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+     home: Home(),
+    );
+  }
+}
+
+class Home extends StatefulWidget{
+  const Home({super.key});
+
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  List grilList2 = [];
+  @override
+  void initState() {
+    for(var i = 1; i < 40; i++){
+      grilList2.add(i);
+    }
+    super.initState();
+  }
+  List gridList = ["Gird no: 1","Gird no: 2","Gird no: 3","Gird no: 4","Gird no: 5","Gird no: 6","Gird no: 7",];
+@override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      resizeToAvoidBottomInset: false,
+      body: GridView.builder(
+          itemCount: grilList2.length ,
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
+          itemBuilder: (context, index) {
+            return Container(
+              margin: EdgeInsets.all(2),
+              alignment: Alignment.center,
+              height: 100,
+              width: 100,
+              color: Colors.blue,
+              child: Text("grid count with for loop ${grilList2[index]}"),
+            );
+          },)
+    );
+  }}

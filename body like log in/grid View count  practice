@@ -1,0 +1,105 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+void main(){
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget{
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+     home: Home(),
+    );
+  }
+}
+
+class Home extends StatelessWidget{
+  const Home({super.key});
+@override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      resizeToAvoidBottomInset: false,
+      body: GridView.count(
+        crossAxisCount: 3,
+      crossAxisSpacing: 5,
+      mainAxisSpacing: 5,
+      children: [
+        Container(
+          alignment: Alignment.center,
+          child: Text("GridView"),
+          height: 100,
+          width: 100,
+          decoration: BoxDecoration(
+            color: Colors.cyan,
+            shape: BoxShape.circle
+          ),
+        ),
+        Container(
+          alignment: Alignment.center,
+          child: Text("GridView"),
+          height: 100,
+          width: 100,
+          color: Colors.cyan,
+        ),
+        Container(
+          alignment: Alignment.center,
+          child: Text("GridView"),
+          height: 100,
+          width: 100,
+          color: Colors.cyan,
+        ),
+        Container(
+          alignment: Alignment.center,
+          child: Text("GridView"),
+          height: 100,
+          width: 100,
+          color: Colors.cyan,
+        ),
+        Container(
+          alignment: Alignment.center,
+          height: 100,
+          width: 100,
+          child: Text("GridView"),
+          decoration: BoxDecoration(
+              color: Colors.cyan,
+              shape: BoxShape.circle
+          ),
+        ),
+        Container(
+          alignment: Alignment.center,
+          child: Text("GridView"),
+          height: 100,
+          width: 100,
+          color: Colors.cyan,
+        ),
+        Container(
+          alignment: Alignment.center,
+          child: Text("GridView"),
+          height: 100,
+          width: 100,
+          color: Colors.cyan,
+        ),
+        Container(
+          alignment: Alignment.center,
+          child: Text("GridView"),
+          height: 100,
+          width: 100,
+          color: Colors.cyan,
+        ),
+        Container(
+          alignment: Alignment.center,
+          height: 100,
+          width: 100,
+          child: Text("GridView"),
+          decoration: BoxDecoration(
+              color: Colors.cyan,
+              shape: BoxShape.circle
+          ),
+        )
+      ],
+      )
+    );
+  }}

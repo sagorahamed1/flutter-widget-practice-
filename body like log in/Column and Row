@@ -1,0 +1,124 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+void main()=> runApp(MyApp());
+
+class MyApp extends StatelessWidget{@override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(primarySwatch: Colors.deepOrange),
+      home: Home(),
+      
+    );
+  }}
+
+class Home extends StatelessWidget{@override
+  Widget build(BuildContext context) {
+   return Scaffold(
+     appBar: AppBar(title: Text("Column and Row"),),
+     body: SingleChildScrollView(
+       child: Container(
+         margin: EdgeInsets.all(10),
+         child: Column(
+           children: [
+             Row(
+               children: [
+                 Container(
+                   margin: EdgeInsets.fromLTRB(7, 0, 0, 0),
+                   alignment: Alignment.topLeft,
+                   height: 250,
+                   width: 120,
+                   decoration: BoxDecoration(
+                     color: Colors.purple
+                   ),
+                 ),
+                 SizedBox(width: 10,),
+                 Container(
+                   child: Column(
+                     children: [
+                       Container(
+                         alignment: Alignment.topRight,
+                         height: 120,
+                         width: 150,
+                         color: Colors.deepOrange,
+                       ),
+                       SizedBox(height: 10,),
+
+                       Container(
+                         alignment: Alignment.topRight,
+                         height: 120,
+                         width: 150,
+                         color: Colors.amber,
+                         )
+                     ],
+                   ),
+                 ),
+               ],
+             ),
+             SizedBox(height: 8,),
+             Container(
+               margin: EdgeInsets.fromLTRB(0, 2, 10, 10),
+               padding: EdgeInsets.fromLTRB(0, 15, 10, 10),
+               height: 300,
+               width: 280,
+               decoration: BoxDecoration(
+                 color: Colors.blueGrey,
+                 borderRadius: BorderRadius.circular(2 )
+               ),
+               child: Container(
+                 child: Row(
+                   children: [
+                     Container(
+                       padding: EdgeInsets.fromLTRB(1, 1, 1, 20),
+                       alignment: Alignment.topLeft,
+                       height: 160,
+                       width: 100,
+                       decoration: BoxDecoration(
+                         color: Colors.blue,
+                       ),
+                       child: Center(child: Image.network("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxKwbs5s5pgs9F4GVeyzlqzlHSrWxrtPMo6w&usqp=CAU")),
+                     ),SizedBox(width: 8,),
+
+                     Column(
+                       children: [
+                         Container(
+                           margin: EdgeInsets.fromLTRB(0, 58, 0, 0),
+                           height: 50,
+                           width: 160,
+                           color: Colors.lightBlueAccent,
+                           child: const Center(
+                             child: Text("Name: Bald Eagle"),
+                           ),
+                         ),SizedBox(height: 5,),
+
+                         Container(
+                           height: 50,
+                           width: 160,
+                           child: const Center(
+                             child: Text("Habitat: Bald Eagles are primarily found in North America"),
+                           ),
+                           color: Colors.lightBlueAccent,
+                         ),SizedBox(height: 5,),
+
+                         Container(
+                           height: 50,
+                           width: 160,
+                           child: const Center(
+                             child: Text("Color: Bald Eagles are known for their distinctive appearance. "),
+                           ),
+                           color: Colors.lightBlueAccent,
+                         ),
+
+                       ],
+                     )
+                   ],
+                 ),
+               ),
+             )
+           ],
+         ),
+       ),
+     ),
+   );
+  }}

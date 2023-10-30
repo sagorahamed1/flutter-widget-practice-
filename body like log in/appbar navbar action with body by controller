@@ -1,0 +1,97 @@
+// use matrarial app 
+
+import 'package:flutter/material.dart';
+
+class AppBars extends StatefulWidget {
+   AppBars({super.key});
+
+  @override
+  State<AppBars> createState() => _AppBarsState();
+}
+// singleticker... dara vsyne er this use kora hoi
+class _AppBarsState extends State<AppBars> with SingleTickerProviderStateMixin {
+  // tabController dara bodir satha action set kora hoice
+  late TabController _tabController;
+  @override
+  void initState() {
+    _tabController = TabController(length: 3, vsync: this);
+    super.initState();
+  }
+  @override
+  Widget build(BuildContext context){
+    return Scaffold(
+      // app bar practice tap bar practice example and controller diya body ak ak action er sathe link kora hoice
+      appBar: AppBar(
+        backgroundColor: Colors.green,
+        centerTitle: true,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(bottomLeft: Radius.circular(25), bottomRight: Radius.circular(25))
+        ),
+        title: Text("Appber practice",style: TextStyle(color: Colors.white),),
+        leading: Icon(Icons.menu),
+        actions: [
+          Icon(Icons.settings),
+          Icon(Icons.search),
+          Icon(Icons.three_g_mobiledata)
+        ],
+        bottom: TabBar(
+          controller: _tabController,
+          tabs: [
+            Tab(icon: Icon(Icons.person),text: "profile",),
+            Tab(icon: Icon(Icons.person),text: "profile2",),
+            Tab(icon: Icon(Icons.person),text: "profile3",),
+          ],
+        ),
+      ),
+
+
+       //botom lav var example
+      bottomNavigationBar: Material(
+        color: Colors.green,
+        child: TabBar(
+          controller: _tabController,
+          tabs: [
+            Tab(icon: Icon(Icons.person),text: "profile",),
+            Tab(icon: Icon(Icons.person),text: "profile2",),
+            Tab(icon: Icon(Icons.person),text: "profile3",),
+          ],
+        ),
+      ),
+
+
+       body: Container(
+         height: double.infinity,
+         width: double.infinity,
+         decoration: BoxDecoration(
+           color: Colors.blueGrey
+         ),
+
+           // tabVarView use korte hobe and tabController
+           child: TabBarView(
+               controller: _tabController,
+                 children: [
+                  Container(
+                    height: 200,
+                    width: 200,
+                    color: Colors.yellow,
+                    child: Text("this is first person111111"),
+                  ),
+
+                   Container(
+                     height: 200,
+                     width: 200,
+                     color: Colors.red,
+                     child: Text("this is first person222222"),
+                   ),
+                   Container(
+                     height: 200,
+                     width: 200,
+                     color: Colors.purple,
+                     child: Text("this is first person333333333"),
+                   )
+                 ]
+             )
+       ),
+    );
+  }
+}

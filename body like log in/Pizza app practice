@@ -1,0 +1,356 @@
+
+
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:providers/productlist.dart';
+
+void main()=> runApp(App());
+class App extends StatelessWidget {
+  const App({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp (
+      debugShowCheckedModeBanner: false,
+      home: Home(),
+    );
+  }
+}
+
+class Home extends StatelessWidget {
+  const Home({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold (
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Color(0xFfe36dc0),
+        titleSpacing: 12,
+        leading: Icon(Icons.menu, color: Colors.black,),
+        title: Text("Pizza", style: TextStyle(fontSize: 17,color: Colors.black),),),
+
+
+
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Column(
+          children: [
+            SingleChildScrollView(
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                child: Column(
+                  children: [
+                    Stack(
+                      children: [
+                        Column(
+                          children: [
+                            Container(
+                              height: 250,
+                              width: MediaQuery.of(context).size.width,
+                              decoration: BoxDecoration(
+                                color: Color(0xFfe36dc0)
+                              ),
+                            ),
+                          ],
+                        ),SizedBox(width: 50,),
+                        Column(
+                          children: [
+                            Row(
+                              children: [
+                                Expanded(
+                                  child: Container(
+                                    margin: EdgeInsets.fromLTRB(5, 27, 5, 5),
+                                    height: 30,
+                                    width: 200,
+                                    color: Color(0xFFcb42f5),
+                                    child:  Row(
+                                      children: [
+                                        Center(
+                                            child: Container(
+                                              padding: EdgeInsets.all(8),
+                                              child: Text("29 Hola street, califonia, USA",
+                                                style: TextStyle(color: Colors.white),),
+                                              decoration: BoxDecoration(
+                                                  shape: BoxShape.circle
+                                              ),
+                                            )),
+
+                                        Container(
+                                            padding: EdgeInsets.fromLTRB(13, 0, 0, 0),
+                                            child: Icon(Icons.location_on, color: Colors.white70,)),
+
+
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: 30,),
+
+
+                            SingleChildScrollView(
+                              scrollDirection: Axis.horizontal,
+                              child: Container(
+                                child: Row(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Container(
+                                      child: Column(
+                                        children: [
+                                          Container(
+                                            padding: EdgeInsets.fromLTRB(8, 5, 8, 0),
+                                            child: Image.network("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmhqHTqa7KZz97Q53_AWtCmGLa_88nwd4lwA&usqp=CAU",
+                                                width: 100, height: 100),
+                                          ),
+                                          SizedBox(height: 20,child: Text("Pizza",
+                                          style: TextStyle(fontWeight: FontWeight.bold),
+                                          ),)
+                                        ],
+                                      ),
+                                    ),
+
+
+                                    Container(
+                                      child: Column(
+                                        children: [
+                                          Container(
+                                            padding: EdgeInsets.fromLTRB(8, 5, 8, 0),
+                                            child: Image.network("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBPUu0T5HzxKuvq14yT54jPfiL0omfiJAEuQ&usqp=CAU",
+                                                width: 105, height: 100),
+                                          ),
+                                          SizedBox(height: 20,child: Text("Salad",
+                                            style: TextStyle(fontWeight: FontWeight.bold),
+                                          ),)
+                                        ],
+                                      ),
+                                    ),
+
+
+                                    Container(
+                                      child: Column(
+                                        children: [
+                                          Container(
+                                            padding: EdgeInsets.fromLTRB(8, 9, 8, 0),
+                                            child: Image.network("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7zpd3buZ3oEjJejjvB8F9MoB8WSXAeV59og&usqp=CAU",
+                                                width: 80, height: 83),
+                                          ),
+                                          SizedBox(height: 60,child: Text("Testy Pizza",
+                                            style: TextStyle(fontWeight: FontWeight.bold),
+                                          ),)
+                                        ],
+                                      ),
+                                    ),
+
+
+                                    Container(
+                                      child: Column(
+                                        children: [
+                                          Container(
+                                            padding: EdgeInsets.fromLTRB(8, 5, 8, 0),
+                                            child: Image.network("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmhqHTqa7KZz97Q53_AWtCmGLa_88nwd4lwA&usqp=CAU",
+                                                width: 100, height: 100),
+                                          ),
+                                          SizedBox(height: 20,child: Text("Special Pizza",
+                                            style: TextStyle(fontWeight: FontWeight.bold),
+                                          ),)
+                                        ],
+                                      ),
+                                    ),
+
+
+                                  ],
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),SizedBox(height: 20,),
+
+
+            SingleChildScrollView(
+              scrollDirection: Axis.vertical,
+              child: Container(
+                height: MediaQuery.of(context).size.height,
+                child: Expanded(child: Homes()),
+              ),
+            )
+
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+
+
+
+
+class Homes extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+          padding: EdgeInsets.fromLTRB(5, 15, 4, 8),
+          children: [
+            Product(
+              name: "Pizza Margherita",
+              description: "Classic pizza with tomato, mozzarella, and basil.",
+              price: "Tk 300",
+            ),
+            Product(
+              name: "Greek Salad",
+              description: "Fresh Greek salad with olives, feta cheese, and dressing.",
+              price: "Tk 150",
+            ),
+            Product(
+              name: "Burger Deluxe",
+              description: "Deluxe burger with bacon, avocado, and special sauce.",
+              price: "Tk 250",
+            ),
+            Product(
+              name: "Sushi Platter",
+              description: "Assorted sushi rolls with soy sauce and wasabi.",
+              price: "Tk 500",
+            ),
+            Product(
+              name: "Spaghetti Carbonara",
+              description: "Creamy carbonara pasta with bacon and Parmesan.",
+              price: "Tk 200",
+            ),
+            Product(
+              name: "Taco Trio",
+              description: "Three tacos with seasoned beef, lettuce, and salsa.",
+              price: "Tk 180",
+            ),
+            Product(
+              name: "Ribeye Steak",
+              description: "Juicy ribeye steak with grilled vegetables.",
+              price: "Tk 450",
+            ),
+            Product(
+              name: "Chicken Shawarma",
+              description: "Chicken shawarma wrap with tahini sauce.",
+              price: "Tk 160",
+            ),
+            Product(
+              name: "Seafood Paella",
+              description: "Traditional seafood paella with saffron rice.",
+              price: "Tk 350",
+            ),
+            Product(
+              name: "Chicken Caesar Salad",
+              description: "Classic Caesar salad with grilled chicken breast.",
+              price: "Tk 180",
+            ),
+            Product(
+              name: "Vegetarian Pizza",
+              description: "Vegetarian pizza with a variety of fresh veggies.",
+              price: "Tk 280",
+            ),
+            Product(
+              name: "Caesar Salad",
+              description: "Classic Caesar salad with croutons and Caesar dressing.",
+              price: "Tk 150",
+            ),
+            Product(
+              name: "BBQ Ribs",
+              description: "Smoky BBQ ribs with coleslaw and cornbread.",
+              price: "Tk 320",
+            ),
+            Product(
+              name: "Mushroom Risotto",
+              description: "Creamy mushroom risotto with Parmesan cheese.",
+              price: "Tk 210",
+            ),
+            Product(
+              name: "Club Sandwich",
+              description: "Club sandwich with turkey, bacon, lettuce, and tomato.",
+              price: "Tk 190",
+            ),
+            Product(
+              name: "Shrimp Scampi",
+              description: "Garlic butter shrimp scampi over linguine.",
+              price: "Tk 280",
+            ),
+            Product(
+              name: "Chocolate Cake",
+              description: "Decadent chocolate cake with chocolate ganache.",
+              price: "Tk 120",
+            ),
+            Product(
+              name: "Chicken Noodle Soup",
+              description: "Homemade chicken noodle soup with vegetables.",
+              price: "Tk 100",
+            ),
+            Product(
+              name: "Fruit Salad",
+              description: "Fresh fruit salad with a mix of seasonal fruits.",
+              price: "Tk 90",
+            ),
+          ],
+    );
+  }
+}
+
+
+
+class Product extends StatelessWidget {
+  final String name;
+  final String description;
+  final String price;
+
+
+  const Product({super.key, required this.name, required this.description, required this.price});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(4),
+      height: 150,
+      child: Card(
+        elevation: 5,
+        shadowColor: Colors.purpleAccent,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            SizedBox(height: 72,child: Image.network("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBPUu0T5HzxKuvq14yT54jPfiL0omfiJAEuQ&usqp=CAU",
+            height: 90,
+              width: 90,
+            ),),
+            Expanded(
+              child: Container(
+                padding: EdgeInsets.all(10),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(name, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),),
+                    ),
+
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Expanded(child: Text(description, style: TextStyle(fontSize: 10),)),
+                    ),
+
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(price),
+                    ),
+                  ],
+                ),
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}

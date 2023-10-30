@@ -1,0 +1,43 @@
+  @override
+  Widget build(BuildContext context) {
+    var heit = MediaQuery.of(context).size.height/2;
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: Text("buttom"),),
+        body: ListView(
+          children: [
+            ListTile(
+              title: Text("Sagor ahamed"),
+              subtitle: Text("Flutter developer"),
+              leading: Image.asset("assets/sagor.jpg"),
+              trailing: Icon(Icons.favorite),
+            ),
+            ListTile(
+              title: Text("Mahim ahamed"),
+              subtitle: Text("bussesman"),
+              leading: Image.asset("assets/soid.jpg"),
+              trailing: Icon(Icons.star),
+              onTap: (){
+                print("sagor ahamed");
+                // Navigator.of(context).push(MaterialPageRoute(builder: (context) => Productinfo(id: snapshot.data[index]["id"]),),);
+                Navigator.of(context).push(MaterialPageRoute(builder: (context)=> Person()));
+              },
+            ),
+            ListTile(
+              title: Text("Mahim ahamed"),
+              subtitle: Text("bussesman"),
+              leading: Image.asset("assets/sagors.jfif"),
+              trailing: Icon(Icons.star),
+            ),
+            ListTile(
+              title: Text("Mahim ahamed"),
+              subtitle: Text("bussesman"),
+              leading: Image.asset("assets/sagors.jfif"),
+              trailing: Icon(Icons.star),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
