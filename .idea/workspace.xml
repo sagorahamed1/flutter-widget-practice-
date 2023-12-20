@@ -1,39 +1,458 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AndroidLayouts">
-    <shared>
-      <config />
-    </shared>
-  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0dd29b19-0b25-460d-a4af-a6fa2809020a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/dart_practice/assets/person_file.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dart_practice/lib/person_class.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hive_products_example/lib/models/product.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hive_products_example/lib/widgets/product_home_page.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/json/assets/file.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/json/lib/afsana.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/json/lib/person_home_page.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/json/lib/persons.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/json/lib/second_page.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kiso_nai/assets/person.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kiso_nai/lib/data.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kiso_nai/lib/person.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kiso_nai/lib/person_details_page.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kiso_nai_seconds/lib/models/product_list.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kiso_nai_seconds/lib/models/products.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kiso_nai_seconds/lib/pages/home_page.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kiso_nai_seconds/lib/widgets/productList.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/new_localization/lib/l10n/app_bn.arb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/new_localization/lib/l10n/app_en.arb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+    <list default="true" id="428825af-332f-4928-ae05-b62e98859e51" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/constents/base_url.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/constents/end_url.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/controller/product_controller.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/pages/home_page.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/product.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sagor_new/lib/models/person.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sagor_new/lib/pages/home_pages.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sql_crud_practice/lib/sql_helper.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widgets/lib/utils/app_colors.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widgets/lib/views/buttoms/bottom_nab.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widgets/lib/views/buttoms/custom_back.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widgets/lib/views/buttoms/custom_elevated_buttom.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widgets/lib/views/texts/coustom_text.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/.metadata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/analysis_options.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/android/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/android/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/android/app/src/debug/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/android/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/android/app/src/main/kotlin/com/example/dart_practice/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/android/app/src/main/res/drawable-v21/launch_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/android/app/src/main/res/drawable/launch_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/android/app/src/main/res/values-night/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/android/app/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/android/app/src/profile/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/android/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/android/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/android/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/assets/person_file.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/ios/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/ios/Flutter/AppFrameworkInfo.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/ios/Flutter/Debug.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/ios/Flutter/Release.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/ios/Runner.xcworkspace/contents.xcworkspacedata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/ios/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/ios/Runner.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/ios/Runner/AppDelegate.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/ios/Runner/Base.lproj/LaunchScreen.storyboard" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/ios/Runner/Base.lproj/Main.storyboard" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/ios/Runner/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/ios/Runner/Runner-Bridging-Header.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/ios/RunnerTests/RunnerTests.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/lib/main.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/lib/person_class.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/linux/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/linux/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/linux/flutter/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/linux/flutter/generated_plugin_registrant.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/linux/flutter/generated_plugin_registrant.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/linux/flutter/generated_plugins.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/linux/main.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/linux/my_application.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/linux/my_application.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/macos/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/macos/Flutter/Flutter-Debug.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/macos/Flutter/Flutter-Release.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/macos/Flutter/GeneratedPluginRegistrant.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/macos/Runner.xcodeproj/project.pbxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/macos/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/macos/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/macos/Runner.xcworkspace/contents.xcworkspacedata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/macos/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/macos/Runner/AppDelegate.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/macos/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_1024.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_128.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_256.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_64.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/macos/Runner/Base.lproj/MainMenu.xib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/macos/Runner/Configs/AppInfo.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/macos/Runner/Configs/Debug.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/macos/Runner/Configs/Release.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/macos/Runner/Configs/Warnings.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/macos/Runner/DebugProfile.entitlements" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/macos/Runner/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/macos/Runner/MainFlutterWindow.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/macos/Runner/Release.entitlements" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/macos/RunnerTests/RunnerTests.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/pubspec.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/pubspec.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/test/widget_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/web/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/web/icons/Icon-192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/web/icons/Icon-512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/web/icons/Icon-maskable-192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/web/icons/Icon-maskable-512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/web/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/web/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/windows/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/windows/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/windows/flutter/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/windows/flutter/generated_plugin_registrant.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/windows/flutter/generated_plugin_registrant.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/windows/flutter/generated_plugins.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/windows/runner/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/windows/runner/Runner.rc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/windows/runner/flutter_window.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/windows/runner/flutter_window.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/windows/runner/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/windows/runner/resource.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/windows/runner/resources/app_icon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/windows/runner/runner.exe.manifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/windows/runner/utils.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/windows/runner/utils.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/windows/runner/win32_window.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_practice/windows/runner/win32_window.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/.metadata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/analysis_options.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/android/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/android/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/android/app/src/debug/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/android/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/android/app/src/main/kotlin/com/example/hive_products/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/android/app/src/main/res/drawable-v21/launch_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/android/app/src/main/res/drawable/launch_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/android/app/src/main/res/values-night/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/android/app/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/android/app/src/profile/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/android/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/android/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/android/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/ios/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/ios/Flutter/AppFrameworkInfo.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/ios/Flutter/Debug.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/ios/Flutter/Release.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/ios/Runner.xcworkspace/contents.xcworkspacedata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/ios/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/ios/Runner.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/ios/Runner/AppDelegate.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/ios/Runner/Base.lproj/LaunchScreen.storyboard" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/ios/Runner/Base.lproj/Main.storyboard" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/ios/Runner/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/ios/Runner/Runner-Bridging-Header.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/ios/RunnerTests/RunnerTests.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/lib/main.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/linux/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/linux/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/linux/flutter/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/linux/flutter/generated_plugin_registrant.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/linux/flutter/generated_plugin_registrant.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/linux/flutter/generated_plugins.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/linux/main.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/linux/my_application.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/linux/my_application.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/macos/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/macos/Flutter/Flutter-Debug.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/macos/Flutter/Flutter-Release.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/macos/Flutter/GeneratedPluginRegistrant.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/macos/Runner.xcodeproj/project.pbxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/macos/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/macos/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/macos/Runner.xcworkspace/contents.xcworkspacedata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/macos/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/macos/Runner/AppDelegate.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/macos/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_1024.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_128.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_256.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_64.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/macos/Runner/Base.lproj/MainMenu.xib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/macos/Runner/Configs/AppInfo.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/macos/Runner/Configs/Debug.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/macos/Runner/Configs/Release.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/macos/Runner/Configs/Warnings.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/macos/Runner/DebugProfile.entitlements" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/macos/Runner/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/macos/Runner/MainFlutterWindow.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/macos/Runner/Release.entitlements" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/macos/RunnerTests/RunnerTests.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/pubspec.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/pubspec.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/test/widget_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/web/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/web/icons/Icon-192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/web/icons/Icon-512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/web/icons/Icon-maskable-192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/web/icons/Icon-maskable-512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/web/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/web/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/windows/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/windows/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/windows/flutter/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/windows/flutter/generated_plugin_registrant.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/windows/flutter/generated_plugin_registrant.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/windows/flutter/generated_plugins.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/windows/runner/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/windows/runner/Runner.rc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/windows/runner/flutter_window.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/windows/runner/flutter_window.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/windows/runner/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/windows/runner/resource.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/windows/runner/resources/app_icon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/windows/runner/runner.exe.manifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/windows/runner/utils.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/windows/runner/utils.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/windows/runner/win32_window.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_products/windows/runner/win32_window.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/.metadata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/analysis_options.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/android/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/android/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/android/app/src/debug/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/android/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/android/app/src/main/kotlin/com/example/kiso_nai/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/android/app/src/main/res/drawable-v21/launch_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/android/app/src/main/res/drawable/launch_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/android/app/src/main/res/values-night/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/android/app/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/android/app/src/profile/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/android/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/android/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/android/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/assets/person.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/ios/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/ios/Flutter/AppFrameworkInfo.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/ios/Flutter/Debug.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/ios/Flutter/Release.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/ios/Runner.xcworkspace/contents.xcworkspacedata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/ios/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/ios/Runner.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/ios/Runner/AppDelegate.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/ios/Runner/Base.lproj/LaunchScreen.storyboard" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/ios/Runner/Base.lproj/Main.storyboard" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/ios/Runner/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/ios/Runner/Runner-Bridging-Header.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/ios/RunnerTests/RunnerTests.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/lib/data.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/lib/main.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/lib/person.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/lib/person_details_page.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/linux/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/linux/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/linux/flutter/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/linux/flutter/generated_plugin_registrant.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/linux/flutter/generated_plugin_registrant.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/linux/flutter/generated_plugins.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/linux/main.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/linux/my_application.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/linux/my_application.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/macos/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/macos/Flutter/Flutter-Debug.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/macos/Flutter/Flutter-Release.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/macos/Flutter/GeneratedPluginRegistrant.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/macos/Runner.xcodeproj/project.pbxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/macos/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/macos/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/macos/Runner.xcworkspace/contents.xcworkspacedata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/macos/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/macos/Runner/AppDelegate.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/macos/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_1024.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_128.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_256.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_64.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/macos/Runner/Base.lproj/MainMenu.xib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/macos/Runner/Configs/AppInfo.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/macos/Runner/Configs/Debug.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/macos/Runner/Configs/Release.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/macos/Runner/Configs/Warnings.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/macos/Runner/DebugProfile.entitlements" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/macos/Runner/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/macos/Runner/MainFlutterWindow.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/macos/Runner/Release.entitlements" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/macos/RunnerTests/RunnerTests.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/pubspec.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/pubspec.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/test/widget_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/web/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/web/icons/Icon-192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/web/icons/Icon-512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/web/icons/Icon-maskable-192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/web/icons/Icon-maskable-512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/web/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/web/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/windows/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/windows/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/windows/flutter/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/windows/flutter/generated_plugin_registrant.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/windows/flutter/generated_plugin_registrant.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/windows/flutter/generated_plugins.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/windows/runner/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/windows/runner/Runner.rc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/windows/runner/flutter_window.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/windows/runner/flutter_window.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/windows/runner/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/windows/runner/resource.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/windows/runner/resources/app_icon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/windows/runner/runner.exe.manifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/windows/runner/utils.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/windows/runner/utils.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/windows/runner/win32_window.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai/windows/runner/win32_window.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai_seconds/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai_seconds/.metadata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai_seconds/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai_seconds/analysis_options.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai_seconds/android/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai_seconds/android/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai_seconds/android/app/src/debug/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai_seconds/android/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai_seconds/android/app/src/main/kotlin/com/example/kiso_nai_seconds/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai_seconds/android/app/src/main/res/drawable-v21/launch_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai_seconds/android/app/src/main/res/drawable/launch_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai_seconds/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai_seconds/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai_seconds/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai_seconds/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai_seconds/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai_seconds/android/app/src/main/res/values-night/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai_seconds/android/app/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai_seconds/android/app/src/profile/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai_seconds/android/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai_seconds/android/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai_seconds/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai_seconds/android/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai_seconds/lib/main.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai_seconds/lib/models/product_list.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai_seconds/lib/models/products.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai_seconds/lib/pages/home_page.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai_seconds/lib/widgets/productList.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai_seconds/pubspec.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai_seconds/pubspec.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai_seconds/test/widget_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai_seconds/web/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai_seconds/web/icons/Icon-192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai_seconds/web/icons/Icon-512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai_seconds/web/icons/Icon-maskable-192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai_seconds/web/icons/Icon-maskable-512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai_seconds/web/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiso_nai_seconds/web/manifest.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +472,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2Y1ZWgmR2i2PJwudTXjavzcV3aF" />
+  <component name="ProjectId" id="2Zmmn6t4e6i86xfHdbOQPR4MON8" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -72,18 +491,18 @@
 }</component>
   <component name="RunManager">
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
-      <option name="filePath" value="$PROJECT_DIR$/kiso_nai_seconds/lib/main.dart" />
+      <option name="filePath" value="$PROJECT_DIR$/widgets/lib/main.dart" />
       <method v="2" />
     </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0dd29b19-0b25-460d-a4af-a6fa2809020a" name="Changes" comment="" />
-      <created>1699695085144</created>
+      <changelist id="428825af-332f-4928-ae05-b62e98859e51" name="Changes" comment="" />
+      <created>1703035798011</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1699695085144</updated>
+      <updated>1703035798011</updated>
     </task>
     <servers />
   </component>

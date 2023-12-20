@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/kiso_nai_seconds/kiso_nai_seconds.iml" filepath="$PROJECT_DIR$/kiso_nai_seconds/kiso_nai_seconds.iml" />
-      <module fileurl="file://$PROJECT_DIR$/kiso_nai_seconds/android/kiso_nai_seconds_android.iml" filepath="$PROJECT_DIR$/kiso_nai_seconds/android/kiso_nai_seconds_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/widgets/widgets.iml" filepath="$PROJECT_DIR$/widgets/widgets.iml" />
+      <module fileurl="file://$PROJECT_DIR$/widgets/android/widgets_android.iml" filepath="$PROJECT_DIR$/widgets/android/widgets_android.iml" />
     </modules>
   </component>
 </project>
