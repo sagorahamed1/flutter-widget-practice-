@@ -1,0 +1,79 @@
+import 'package:flutter/material.dart';
+import 'dart:math' show pi;
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: true,
+        ),
+        home: AnimaitionPage());
+  }
+}
+
+class AnimaitionPage extends StatefulWidget {
+  const AnimaitionPage({super.key});
+
+  @override
+  State<AnimaitionPage> createState() => _AnimaitionPageState();
+}
+
+class _AnimaitionPageState extends State<AnimaitionPage>
+    with SingleTickerProviderStateMixin {
+
+  late AnimationController controller;
+  late Animation _animation;
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+     controller =
+        AnimationController(vsync: this, duration: Duration(seconds: 2))..repeat();
+         _animation = Tween<double>(begin: 0, end: 2*pi).animate(controller);
+
+         controller.repeat();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: AnimatedBuilder(
+          animation: controller,
+          builder: (context, child) => Transform(
+            alignment: Alignment.center,
+            transform: Matrix4.identity()..rotateZ(_animation.value),
+            child: Container(
+              height: 200,
+              width: 200,
+             decoration: BoxDecoration(
+               color: Colors.blue,
+               borderRadius: BorderRadius.circular(15),
+               boxShadow: [
+                 BoxShadow(
+                   color: Colors.black.withOpacity(.5),
+                   blurRadius: 7,
+                   spreadRadius: 2,
+                   offset: Offset(0,3)
+                 )
+               ]
+             ),
+              child: Center(child: Text("Animaition")),
+            ),
+          ),
+        )
+      ),
+    );
+  }
+}
