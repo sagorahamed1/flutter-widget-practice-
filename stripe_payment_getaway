@@ -1,0 +1,98 @@
+import 'dart:convert';
+import 'package:flutter/material.dart';
+import 'package:flutter_stripe/flutter_stripe.dart';
+import 'package:http/http.dart' as http;
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+    Stripe.publishableKey = "pk_test_51OVVcyFiDaJ8bQBjyv4imMqxSbWPo07q81rTzpcw7yUIlXiUBfFThslht2LC8uD5Ec5MuiW1SPyrasy8N6v3MfyJ00d1bz549n";
+   // await Stripe.instance.applySettings();
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: true,
+        ),
+        home: HomePage());
+  }
+}
+
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  /// create a map here
+  Map<String, dynamic>? paymentIntent;
+
+
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text("payment gateway with stripe"),
+      ),
+      body: Center(
+        child: TextButton(
+            onPressed: () async {
+              payment();
+            },
+            child: Text(
+              "Buy Now",
+              style: TextStyle(color: Colors.red),
+            )),
+      ),
+    );
+  }
+
+  Future<void> payment() async {
+    try {
+      Map<String, dynamic> body = {"amount": 1000, "currency": "INR"};
+      var response = await http.post(
+          Uri.parse("https://api.stripe.com/v1/payment_intents"),
+          headers: {
+            'Authorization':
+            "Bearer sk_test_51OVVcyFiDaJ8bQBjNbxRzrInTwKZ0OX5zQ22QjOwJ5fBJEN4CJx1SkPmwCiDqmvO6UWOYuB5xMvV2SAjszbpCIDk009t0O7BqT",
+            "Content-type": 'application/x-www-form-urlencoded'
+          });
+
+      paymentIntent = jsonDecode(response.body.toString());
+    } catch (error) {
+      throw Exception(error);
+    }
+
+    ///--------------------set 2 intialization-------------------------------
+    await Stripe.instance
+        .initPaymentSheet(
+        paymentSheetParameters: SetupPaymentSheetParameters(
+            paymentIntentClientSecret:
+            paymentIntent!['client_secret'], // from payment intent
+            style: ThemeMode.light,
+            merchantDisplayName: "Abhi"))
+        .then((value) => {});
+
+    ///----------------------------- set 3-----------------------------------
+    try {
+      await Stripe.instance
+          .presentPaymentSheet()
+          .then((value) => {print("payment successful")});
+    } catch (e) {
+      print("error $e");
+    }
+  }
+
+}
